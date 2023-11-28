@@ -21,7 +21,7 @@ Route::get('/contact', function () {
 Route::redirect('/welcome', '/admin');
 Auth::routes(['register' => false]);
 
-//Route::get('/', 'HomeController@index')->name('home');
+Route::get('/welcome', 'HomeController@index')->name('welcome');
 Route::get('search', 'HomeController@search')->name('search');
 Route::resource('jobs', 'JobController')->only(['index', 'show']);
 Route::get('category/{category}', 'CategoryController@show')->name('categories.show');
