@@ -16,7 +16,9 @@ Route::get('/contact', function () {
     return view('contact_us');
 });
 
-
+Route::get('/connecte', function () {
+    return view('se_connecte');
+});
 
 Route::redirect('/welcome', '/admin');
 Auth::routes(['register' => false]);
@@ -28,7 +30,7 @@ Route::get('category/{category}', 'CategoryController@show')->name('categories.s
 Route::get('location/{location}', 'LocationController@show')->name('locations.show');
 
 Route::group(['prefix' => 'admin', 'as' => 'admin.', 'namespace' => 'Admin', 'middleware' => ['auth']], function () {
-    Route::get('/', 'HomeController@index')->name('welcome');
+    Route::get('/', 'HomeController@index')->name('home');
     // Permissions
     Route::delete('permissions/destroy', 'PermissionsController@massDestroy')->name('permissions.massDestroy');
     Route::resource('permissions', 'PermissionsController');
