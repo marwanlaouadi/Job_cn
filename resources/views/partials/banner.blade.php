@@ -1,15 +1,62 @@
-@hasSection ('banner')
-    <section class="banner-area relative" id="home">	
-        <div class="overlay overlay-bg"></div>
-        <div class="container">
-            <div class="row d-flex align-items-center justify-content-center">
-                <div class="about-content col-lg-12">
-                    <h1 class="text-white">
-                        @yield('banner')
-                    </h1>	
-                    <p class="text-white link-nav"><a href="{{ route('home') }}">Home </a>  <span class="lnr lnr-arrow-right"></span>  <a href="{{ url()->full() }}"> @yield('banner')</a></p>
-                </div>											
-            </div>
-        </div>
-    </section>
-@endif
+<?php
+
+
+use App\Http\Controllers\ProfileController;
+use Illuminate\Support\Facades\Route;
+
+Route::get('/', function () {
+    return view('welcome');
+});
+
+Route::get('/about', function () {
+    return view('about_us');
+});
+
+Route::get('/contact', function () {
+    return view('contact_us');
+});
+
+Route::get('/connecte', function () {
+    return view('se_connecte');
+});
+
+Route::redirect('/welcome', '/admin');
+Auth::routes(['register' => false]);
+
+Route::get('/welcome', 'HomeController@index')->name('welcome');
+Route::get('search', 'HomeController@search')->name('search');
+Route::resource('jobs', 'JobController')->only(['index', 'show']);
+Route::get('category/{category}', 'CategoryController@show')->name('categories.show');
+Route::get('location/{location}', 'LocationController@show')->name('locations.show');
+
+Route::group(['prefix' => 'admin', 'as' => 'admin.', 'namespace' => 'Admin', 'middleware' => ['auth']], function () {
+    Route::get('/', 'HomeController@index')->name('home');
+    // Permissions
+    Route::delete('permissions/destroy', 'PermissionsController@massDestroy')->name('permissions.massDestroy');
+    Route::resource('permissions', 'PermissionsController');
+
+    // Roles
+    Route::delete('roles/destroy', 'RolesController@massDestroy')->name('roles.massDestroy');
+    Route::resource('roles', 'RolesController');
+
+    // Users
+    Route::delete('users/destroy', 'UsersController@massDestroy')->name('users.massDestroy');
+    Route::resource('users', 'UsersController');
+
+    // Categories
+    Route::delete('categories/destroy', 'CategoriesController@massDestroy')->name('categories.massDestroy');
+    Route::resource('categories', 'CategoriesController');
+
+    // Locations
+    Route::delete('locations/destroy', 'LocationsController@massDestroy')->name('locations.massDestroy');
+    Route::resource('locations', 'LocationsController');
+
+    // Companies
+    Route::delete('companies/destroy', 'CompaniesController@massDestroy')->name('companies.massDestroy');
+    Route::post('companies/media', 'CompaniesController@storeMedia')->name('companies.storeMedia');
+    Route::resource('companies', 'CompaniesController');
+
+    // Jobs
+    Route::delete('jobs/destroy', 'JobsController@massDestroy')->name('jobs.massDestroy');
+    Route::resource('jobs', 'JobsController');
+});

@@ -67,16 +67,16 @@
     <h2>Contactez-Nous</h2>
     <form id="contact-form" action="#" method="post">
       <div class="form-group">
-        <label for="fullname">Nom et prénom:</label>
+        <label for="fullname">Nom:</label>
+        <input type="text" id="fullname" name="fullname" required>
+      </div>
+      <div class="form-group">
+        <label for="fullname">Prénom:</label>
         <input type="text" id="fullname" name="fullname" required>
       </div>
       <div class="form-group">
         <label for="Télephone">Télephone:</label>
         <input type="text" id="Télephone" name="Télephone">
-      </div>
-      <div class="form-group">
-        <label for="fax">Fax:</label>
-        <input type="text" id="fax" name="fax">
       </div>
       <div class="form-group">
         <label for="email">E-mail:</label>
@@ -95,20 +95,8 @@
         <input type="text" id="zipcode" name="zipcode" required>
       </div>
       <div class="form-group">
-        <label for="city">Ville:</label>
-        <input type="text" id="city" name="city" required>
-      </div>
-      <div class="form-group">
-        <label for="country">Pays:</label>
-        <input type="text" id="country" name="country" required>
-      </div>
-      <div class="form-group">
         <label for="subject">Objet:</label>
         <input type="text" id="subject" name="subject" required>
-      </div>
-      <div class="form-group">
-        <label for="service">Service concerné:</label>
-        <input type="text" id="service" name="service" required>
       </div>
       <div class="form-group">
         <label for="message">Message:</label>
