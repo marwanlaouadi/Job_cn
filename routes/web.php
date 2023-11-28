@@ -1,9 +1,29 @@
 <?php
 
-Route::redirect('/home', '/admin');
+
+use App\Http\Controllers\ProfileController;
+use Illuminate\Support\Facades\Route;
+
+Route::get('/', function () {
+    return view('welcome');
+});
+
+Route::get('/about', function () {
+    return view('about_us');
+});
+
+Route::get('/contact', function () {
+    return view('contact_us');
+});
+
+Route::get('/connecte', function () {
+    return view('se_connecte');
+});
+
+Route::redirect('/welcome', '/admin');
 Auth::routes(['register' => false]);
 
-Route::get('/', 'HomeController@index')->name('home');
+//Route::get('/', 'HomeController@index')->name('home');
 Route::get('search', 'HomeController@search')->name('search');
 Route::resource('jobs', 'JobController')->only(['index', 'show']);
 Route::get('category/{category}', 'CategoryController@show')->name('categories.show');
