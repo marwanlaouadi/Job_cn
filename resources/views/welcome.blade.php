@@ -69,40 +69,18 @@
 
         <!-- Navbar End -->
 
-
-      <style>
-    /* أسلوب CSS لجعل خلفية حقل الإدخال متناسقة مع الصفحة */
-    .form-control {
-        background-color: rgba(255, 255, 255, 0.8); /* تعيين خلفية شفافة بنسبة 80% */
-        border: 1px solid #fff;
-        color: #000; /* تعيين لون النص إلى أسود */
-    }
-    /* أسلوب CSS لتغيير لون النص داخل الحقل عند الكتابة */
-    .form-control:focus {
-        color: #000; /* يجعل لون النص أسود عند الكتابة داخل الحقل */
-    }
-    
-    /* تحديد خلفية الصفحة */
-    body {
-        background-image: url('img/abc-1.jpg'); /* تعيين صورة الخلفية */
-        background-size: cover; /* جعل الصورة تغطي العرض والارتفاع بالكامل */
-        background-position: center; /* توسيط الصورة داخل العنصر */
-        margin: 0; /* إزالة الهامش الافتراضي للجسم (body) */
-        padding: 0; /* إزالة الحشو الافتراضي للجسم (body) */
-    }
-</style>
-
-<div class="container-fluid p-0">
-    <div class="owl-carousel header-carousel position-relative">
-        <div class="owl-carousel-item position-relative">
-            <img class="img-fluid" src="img/abc-1.jpg" alt="Image" style="max-width: 100%; height: auto;">
-            <div class="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center" style="background: rgba(34, 55, 40,0.5);">
-                <div class="container">
+        <!-- Carousel Start -->
+        <div class="container-fluid p-0">
+            <div class="owl-carousel header-carousel position-relative">
+                <div class="owl-carousel-item position-relative">
+                    <img class="img-fluid" src="img/carousel-2.jpg" alt="">
+                    <div class="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center" style="background: rgba(43, 57, 64, .5);">
+                        <div class="container">
                     <div class="row justify-content-start">
                         <div class="col-12 col-lg-8">
                             <h3 class="display-3 text-white animated slideInDown mb-4">Trouvez l’emploi parfait que vous méritez</h3>
                             <p class="fs-5 fw-medium text-white mb-4 pb-2">Ne vous contentez pas de gagner votre vie. Faites la différence.</p>
-                            <div class="input-group mb-3">
+                                 <div class="input-group mb-3">
                                 <input type="text" class="form-control py-3 ps-4 pe-5" placeholder="Rechercher un Emploi">
                                 <button class="btn btn-primary py-3 px-5 me-3 animated slideInLeft" type="button">Rechercher un Emploi</button>
                             </div>
@@ -113,24 +91,29 @@
         </div>
     </div>
 </div>
+        <!-- Carousel End -->
 
-<!-- الكود الآخر في الصفحة -->
-<div class="container-xxl py-5">
-    <div class="container">
-        <div class="row g-5 align-items-center">
-            <div class="col-lg-6 wow fadeIn" data-wow-delay="0.1s">
-                <div class="row g-0">
-                    <div class="col-md-4">
-                        <img class="img-fluid" src="img/abou1.jpeg" alt="Image 1">
+
+  <!-- About Start -->
+        <div class="container-xxl py-5">
+            <div class="container">
+                <div class="row g-5 align-items-center">
+                    <div class="col-lg-6 wow fadeIn" data-wow-delay="0.1s">
+                        <div class="row g-0 about-bg rounded overflow-hidden">
+                            <div class="col-6 text-start">
+                                <img class="img-fluid w-100" src="img/about-1.jpg">
+                            </div>
+                            <div class="col-6 text-start">
+                                <img class="img-fluid" src="img/about-2.jpg">
+                            </div>
+                            <div class="col-6 text-end">
+                                <img class="img-fluid" src="img/about-3.jpg">
+                            </div>
+                            <div class="col-6 text-end">
+                                <img class="img-fluid w-100" src="img/about-4.jpg">
+                            </div>
+                        </div>
                     </div>
-                    <div class="col-md-4">
-                        <img class="img-fluid" src="img/abou3.jpeg" alt="Image 2">
-                    </div>
-                    <div class="col-md-4">
-                        <img class="img-fluid" src="img/abou2.jpeg" alt="Image 3">
-                    </div>
-                </div>
-            </div>
             <div class="col-lg-6 wow fadeIn" data-wow-delay="0.5s">
                 <h1 class="mb-4">NOTRE OBJECTIF EST DE FACILITER VOTRE ACCÈS AUX MEILLEURES OPPORTUNITÉS PROFESSIONNELLES</h1>
                 <a class="btn btn-primary py-3 px-5 mt-3" href="#">En savoir plus</a>
@@ -441,10 +424,10 @@
             <div class="container py-5">
                 <div class="row g-5">
                     <div class="col-lg-3 col-md-6">
-                        <h5 class="text-white mb-4">Condor</h5>
+                        <h5 class="text-white mb-4">CONDOR</h5>
                         <a class="btn btn-link text-white-50" href="about">A PROPOS</a>
                         <a class="btn btn-link text-white-50" href="">OFFRES D'EMPLOI</a>
-                        <a class="btn btn-link text-white-50" href="">NOS SERVICES</a>
+                        <a class="btn btn-link text-white-50" href="contact">CONTACTEZ-NOUS</a>
                     </div>
                     <div class="col-lg-3 col-md-6">
                         <h5 class="text-white mb-4">CONTACTEZ-NOUS</h5>
@@ -452,10 +435,10 @@
                         <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>Tél :<br>+213 (0)35 87 61 61 <br> +213 (0)35 87 62 62 <br> +213 (0)35 87 63 00 à 03 <br> Fax:<br>+213 (0)35 87 63 63</p>
                         <p class="mb-2"><i class="fa fa-envelope me-3"></i>Direction générale : info@condor.dz</p>
                         <div class="d-flex pt-2">
-                            <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-twitter"></i></a>
-                            <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-facebook-f"></i></a>
-                            <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-youtube"></i></a>
-                            <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-linkedin-in"></i></a>
+                            <a class="btn btn-outline-light btn-social" href="Condor.dz"><i class="fab fa-twitter"></i></a>
+                            <a class="btn btn-outline-light btn-social" href="Condor.dz"><i class="fab fa-facebook-f"></i></a>
+                            <a class="btn btn-outline-light btn-social" href="Condor.dz"><i class="fab fa-youtube"></i></a>
+                            <a class="btn btn-outline-light btn-social" href="Condor.dz"><i class="fab fa-linkedin-in"></i></a>
                         </div>
                     </div>
                     <div class="col-lg-3 col-md-6">
