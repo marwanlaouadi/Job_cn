@@ -4,17 +4,22 @@
     @csrf
 
     <div>
-        <label for="name">الاسم:</label>
+        <label for="name">name</label>
         <input type="text" id="name" name="name" required>
     </div>
 
     <div>
-        <label for="email">البريد الإلكتروني:</label>
+        <label for="email">email</label>
         <input type="email" id="email" name="email" required>
     </div>
 
     <div>
-        <label for="message">رسالة الاتصال:</label>
+        <label for="subject">subject</label>
+        <input type="text" id="name" name="name" required>
+    </div>
+
+    <div>
+        <label for="message">message</label>
         <textarea id="message" name="message" required></textarea>
     </div>
 

@@ -2,8 +2,9 @@
 
 namespace App\Http\Controllers;
 
-use App\Contact; 
+use App\Contact;
 use Illuminate\Http\Request;
+use App\Http\Controllers\Controller; // Import the Controller class
 
 class ContactController extends Controller
 {
@@ -16,8 +17,8 @@ class ContactController extends Controller
             'message' => 'required',
         ]);
 
-        Contact::create($validatedData); // استخدام نموذج الاتصال لإنشاء سجل جديد
+        Contact::create($validatedData);
 
-        return redirect()->back()->with('success', 'تم إرسال الاتصال بنجاح!');
+        return redirect()->back()->with('success', 'Message successfully sent!'); // Include a success message
     }
 }
